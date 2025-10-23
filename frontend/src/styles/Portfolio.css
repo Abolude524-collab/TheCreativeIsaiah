@@ -1,0 +1,18 @@
+.portfolio { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+.portfolio h2 { margin-bottom: 1rem; color:var(--brand-deep) }
+.filters { margin-bottom: 1rem; display:flex; gap:8px; flex-wrap:wrap }
+.filters button { padding: 0.5rem 0.9rem; border-radius:6px; border:1px solid #eee; background:#fff }
+.filters button.active { background:var(--brand-deep); color:#fff; border-color:var(--brand-deep) }
+.grid-columns { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:1rem }
+.project-detail { max-width: 900px; margin: 0 auto; }
+.project-detail .meta { color:var(--muted); font-size:0.9rem }
+.project-detail .description { margin-top: 1rem; color:var(--brand-deep); line-height:1.6; position:relative }
+.project-detail .description.collapsed { max-height:220px; overflow:hidden; }
+.project-detail .description.collapsed::after { content:''; position:absolute; left:0; right:0; bottom:0; height:48px; background: linear-gradient(180deg, rgba(255,255,255,0), rgba(244,244,244,1)); }
+.project-detail .description.expanded { max-height:none }
+
+.show-more{ margin-top:8px; background:transparent; border:none; color:var(--brand-deep); cursor:pointer; font-weight:600 }
+
+/* make the show-more button stick to the bottom of the modal content so it's always reachable */
+.project-detail { display:flex; flex-direction:column }
+.project-detail .show-more{ align-self:center; position:sticky; bottom:8px; background:rgba(255,255,255,0.9); padding:6px 8px; border-radius:6px }

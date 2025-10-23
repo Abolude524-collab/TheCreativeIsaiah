@@ -1,0 +1,32 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal {
+  width: 92%;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem 1.25rem 1.5rem;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.modal-content { margin-top: 1rem; max-height: calc(100vh - 160px); overflow:auto; padding-right:8px }
+
+/* ensure modal scrolls if content is tall so buttons inside remain reachable */
+@media (min-width: 700px) {
+  .modal { max-height: calc(100vh - 80px); }
+}

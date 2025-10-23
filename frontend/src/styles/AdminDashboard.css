@@ -1,0 +1,22 @@
+.admin-dashboard { padding: 2rem; max-width: 1000px; margin: 0 auto; }
+.admin-header { display:flex; justify-content:space-between; align-items:center }
+.tabs button { margin-left:0.5rem; padding:0.45rem 0.75rem; border-radius:6px; background:#fff; color:var(--brand-deep) }
+.tabs .active { background:var(--brand-deep); color:var(--brand-gold) }
+/* unread badge */
+.unread-badge { display:inline-block; background:var(--brand-gold); color:#000; font-weight:700; padding:0.08rem 0.45rem; border-radius:999px; margin-left:8px; font-size:0.85rem }
+.admin-body form { display:flex; flex-direction:column; gap:0.6rem; max-width:560px }
+.admin-body input, .admin-body textarea { padding:0.6rem; border-radius:6px; border:1px solid #ddd }
+
+.messages-list.messages-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:12px }
+.message-card { border:1px solid #eee; padding:12px; border-radius:8px; display:flex; flex-direction:column; gap:8px }
+.message-head { display:flex; justify-content:space-between; align-items:flex-start }
+.message-actions { display:flex; gap:8px }
+.message-actions button, .message-actions .btn { padding:0.35rem 0.6rem; border-radius:6px; border:1px solid #ddd; background:#fff }
+.message-body { white-space:pre-wrap; color:#222 }
+.message-foot { display:flex; justify-content:space-between; align-items:center; margin-top:8px }
+.muted { color:#666 }
+.small { font-size:0.85rem }
+
+@media (max-width:900px) {
+	.messages-list.messages-grid { grid-template-columns: 1fr }
+}

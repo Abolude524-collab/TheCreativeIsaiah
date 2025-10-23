@@ -1,0 +1,30 @@
+.testimonial-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.testimonial-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.testimonial-quote {
+  font-style: italic;
+  color: #222;
+  margin: 0;
+}
+.testimonial-author {
+  font-size: 0.95rem;
+  color: #333;
+}
+.testimonial-role {
+  color: #777;
+  font-weight: 400;
+  margin-left: 6px;
+}

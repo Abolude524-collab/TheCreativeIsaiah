@@ -1,0 +1,12 @@
+.chat-widget{ position:fixed; right:20px; bottom:20px; z-index:9999; font-family:inherit }
+.chat-toggle{ background:var(--brand-deep); color:#fff; padding:10px 14px; border-radius:999px; cursor:pointer; box-shadow:0 8px 20px rgba(0,0,0,0.12) }
+.chat-panel{ width:320px; max-height:420px; background:#fff; border-radius:8px; box-shadow:0 12px 40px rgba(0,0,0,0.12); overflow:hidden; margin-top:8px }
+.chat-messages{ padding:12px; height:280px; overflow:auto; display:flex; flex-direction:column; gap:8px }
+.chat-msg.user{ align-self:flex-end; background:linear-gradient(90deg,var(--brand-gold),#ffd); padding:8px 10px; border-radius:8px; max-width:80% }
+.chat-msg.agent{ align-self:flex-start; background:#f4f4f4; padding:8px 10px; border-radius:8px; max-width:80% }
+.chat-name{ font-size:0.75rem; color:var(--muted); margin-bottom:4px }
+.chat-text{ font-size:0.95rem }
+.chat-inputs{ padding:8px; border-top:1px solid #eee; display:flex; flex-direction:column; gap:8px }
+.chat-inputs input[type='text'], .chat-inputs input{ padding:8px; border-radius:6px; border:1px solid #ddd }
+.chat-inputs button{ background:var(--brand-deep); color:#fff; padding:8px 10px; border-radius:6px; border:none }
+.chat-widget.open .chat-toggle{ border-bottom-left-radius:0; border-bottom-right-radius:0 }

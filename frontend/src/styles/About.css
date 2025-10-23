@@ -1,0 +1,25 @@
+:root{
+    --brand-deep: #000000;
+    --brand-gold: #FFD700;
+    --muted: #6b6b6b;
+    --bg: #F4F4F4;
+}
+
+.about-grid{ display:grid; grid-template-columns: 320px 1fr; gap:2rem; align-items:start; padding:2rem 0 }
+.about-image{ display:flex; justify-content:center; align-items:start }
+.about-image img{ width:220px; height:220px; object-fit:cover; border-radius:50%; box-shadow:0 8px 30px rgba(0,0,0,0.12); border:6px solid #fff }
+
+.profile-photo{ display:block }
+
+.skills-list{ margin-top:0.75rem; display:flex; flex-wrap:wrap; gap:0.5rem }
+.skill-badge{ background:linear-gradient(135deg,var(--brand-gold) 0%, rgba(255,215,0,0.15) 100%); color:var(--brand-deep); padding:0.45rem 0.7rem; border-radius:999px; font-weight:600; font-size:0.9rem; box-shadow:0 4px 12px rgba(0,0,0,0.06) }
+.about-content h2{ color:var(--brand-deep); margin-bottom:0.5rem }
+.about-content h3{ color:var(--brand-deep); margin-top:1rem }
+.about-content p{ color:var(--muted); line-height:1.6 }
+.about .cta-btn{ margin-top:1rem }
+
+@media (max-width:900px){
+    .about-grid{ grid-template-columns: 1fr; }
+    .about-image{ justify-content:center }
+    .about-image img{ width:180px; height:180px }
+}

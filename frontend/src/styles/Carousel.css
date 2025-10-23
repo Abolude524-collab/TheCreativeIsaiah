@@ -1,0 +1,61 @@
+/* Simple carousel styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  background: #fff;
+}
+.carousel.empty {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.6s ease;
+  width: 100%;
+}
+.slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width:720px){
+  .carousel { max-width: 100%; }
+  .slide img { max-height: 320px }
+  .dot { width: 12px; height: 12px }
+}
+.carousel .slide img { width:100%; height:auto }
+.carousel { touch-action: pan-y; }
+.dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.dot.active { background: var(--brand-deep); }

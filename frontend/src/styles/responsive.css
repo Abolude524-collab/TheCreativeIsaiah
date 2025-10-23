@@ -1,0 +1,67 @@
+/* Global responsive helpers */
+
+/* Slightly larger tap targets on mobile */
+@media (max-width:720px){
+  .cta-btn { padding: 0.9rem 1.2rem; font-size: 15px }
+  button, input, textarea { font-size: 15px }
+  .container { padding: 0 0.8rem }
+  .floating { width:72px; height:72px }
+  .profile-wrap { width:220px; height:260px }
+}
+
+/* Utility: stack grid columns into single column on small screens */
+@media (max-width:900px){
+  .grid { grid-template-columns: 1fr }
+}
+
+/* Ensure nav menu items are easy to tap */
+@media (max-width:720px){
+  .navbar ul.mobile-hidden { min-width: 180px }
+  .navbar ul.mobile-hidden a { display:block; padding: 0.8rem 1rem }
+}
+
+/* Responsive images inside cards and carousels */
+.slide img { width:100%; height:auto; object-fit:cover }
+
+/* Hero specific tweaks */
+@media (max-width:900px){
+  .hero { padding: 2rem 0 }
+  .hero h1 { font-size: 1.8rem }
+  .lead { max-width: 60ch }
+}
+
+/* Testimonials stack */
+@media (max-width:768px){
+  .testimonials-row { display: flex; flex-direction: column; gap: 1rem }
+}
+
+/* Portfolio thumbnails */
+@media (max-width:900px){
+  .portfolio-grid { display: grid; grid-template-columns: 1fr; gap: 1rem }
+}
+
+/* Portfolio modal and project detail tweaks */
+@media (max-width:900px){
+  .project-detail { padding: 1rem }
+  .project-detail .description.collapsed { max-height: 180px }
+  .project-detail .description { font-size: 15px }
+  .project-detail .show-more { position: relative; bottom: auto }
+  .project-detail .meta { font-size: 0.85rem }
+}
+
+/* Contact form tweaks */
+@media (max-width:720px){
+  .contact form { display:flex; flex-direction:column; gap:0.75rem }
+  .contact input, .contact textarea { font-size: 15px }
+}
+
+/* Admin dashboard responsive */
+@media (max-width:900px){
+  .admin-dashboard .tabs { display:flex; flex-wrap:wrap; gap:8px }
+  .admin-dashboard form { display:flex; flex-direction:column; gap:0.6rem }
+  .admin-dashboard .grid { display:grid; grid-template-columns: 1fr; gap: 1rem }
+  .admin-dashboard .project-card img { width:100%; height:auto; object-fit:cover }
+  .testimonial-admin-card { padding: 0.6rem }
+  .messages-grid { display:flex; flex-direction:column; gap:0.8rem }
+}
+
