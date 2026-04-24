@@ -16,42 +16,45 @@ function About() {
 
   return (
     <div className="about container about-grid">
-      <div className="about-image">
+      <div className="about-image" style={{ animation: 'fadeIn 0.8s ease-out' }}>
         <img src={imgSrc} alt="Isaiah Methuselah" className="profile-photo" loading="lazy" />
       </div>
-      <div className="about-content">
-        <h2>About Me</h2>
-
-        <h3>Work experience</h3>
-        <p>
-          Been a graphic designer for 3 years, creating functional and effective designs that meet clients' goals and expectations.
-        </p>
-        <p>
-          I&apos;ve worked with different brands from the fashion industry, the health industry, tech industry and real estates companies.
+      <div className="about-content" style={{ animation: 'fadeInUp 0.8s ease-out 0.2s backwards' }}>
+        <h2>My Journey</h2>
+        <p className="lead" style={{ fontSize: '1.2rem', color: 'var(--brand-deep)', fontWeight: '500', marginBottom: '2rem' }}>
+          I believe that great design is not just about making things look good—it's about solving problems and telling compelling stories.
         </p>
 
-        <h3>Skills & Tools</h3>
+        <h3>Experience</h3>
+        <p>
+          With over 3 years of experience as a graphic designer, I focus on creating functional, striking, and effective designs that exceed client expectations and drive real business goals.
+        </p>
+        <p>
+          My portfolio spans across diverse sectors, including fashion, healthcare, technology, and real estate, allowing me to adapt my creative approach to various brand voices and target audiences.
+        </p>
+
+        <h3>Toolkit & Expertise</h3>
         <div className="skills-list" aria-label="skills and tools">
           {[
             'Adobe Photoshop',
             'Illustrator',
             'InDesign',
             'Canva',
-            'Branding',
+            'Brand Identity',
             'Print Design',
             'Typography',
-            'Logo Design'
+            'Creative Direction'
           ].map((s) => (
             <span key={s} className="skill-badge">{s}</span>
           ))}
         </div>
 
-        <h3>Fun Fact</h3>
+        <h3>Beyond the Screen</h3>
         <p>
-          Outside of design, I enjoy sketching, photography, and exploring creative trends online.
+          When I'm not designing, you can find me sketching, practicing photography, or mentoring up-and-coming designers.
         </p>
 
-        <a href="/the-creative-isaiah-resume-cv.pdf" download className="cta-btn">Download CV</a>
+        <a href="/the-creative-isaiah-resume-cv.pdf" download className="cta-btn" style={{ marginTop: '2rem' }}>Download Resume</a>
       </div>
     </div>
   );

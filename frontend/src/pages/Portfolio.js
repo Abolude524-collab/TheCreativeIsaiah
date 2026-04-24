@@ -35,17 +35,28 @@ function Portfolio() {
 
   return (
     <div className="portfolio">
-      <h2>Portfolio</h2>
-      <div className="filters">
+      <div style={{ textAlign: 'center', marginBottom: '3rem', animation: 'fadeInUp 0.6s ease-out' }}>
+        <h2 style={{ fontSize: '3rem', margin: '0 0 1rem' }}>My Work</h2>
+        <p style={{ color: 'var(--muted)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>A selection of my recent design projects, spanning brand identity, print media, and digital experiences.</p>
+      </div>
+
+      <div className="filters" style={{ animation: 'fadeIn 0.8s ease-out' }}>
         {categories.map(cat => (
           <button key={cat} onClick={() => setFilter(cat)} className={filter === cat ? 'active' : ''}>{cat}</button>
         ))}
       </div>
-      <div className="grid grid-columns">
-        {filtered.map(project => (
-          <ProjectCard key={project._id} project={project} onClick={handleProjectClick} />
-        ))}
-      </div>
+
+      {filtered.length === 0 ? (
+        <div style={{ textAlign: 'center', padding: '4rem 0', color: 'var(--muted)' }}>
+          <p>No projects found in this category.</p>
+        </div>
+      ) : (
+        <div className="grid grid-columns" style={{ animation: 'fadeInUp 1s ease-out' }}>
+          {filtered.map(project => (
+            <ProjectCard key={project._id} project={project} onClick={handleProjectClick} />
+          ))}
+        </div>
+      )}
       
      
       <Modal open={!!active} onClose={close}>

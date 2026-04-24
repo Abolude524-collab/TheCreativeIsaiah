@@ -6,9 +6,14 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
-  <img src="/uploads/Logo2.jpg" alt="Logo" style={{ height: '80px', verticalAlign: 'middle' }} />
-        <span style={{ fontWeight: 'bold', marginRight: '8px' }}>The Creative Isaiah- <i>...where creativity thrives</i></span>
+      <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '1rem', textDecoration: 'none' }}>
+        <a href="/" style={{ display: 'flex', alignItems: 'center', color: 'inherit', textDecoration: 'none' }}>
+          <img src="/uploads/Logo2.jpg" alt="Logo" style={{ height: '60px', verticalAlign: 'middle', borderRadius: '8px' }} />
+          <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '12px' }}>
+            <span style={{ fontWeight: 'bold', letterSpacing: '-0.02em', fontSize: '1.2rem', lineHeight: '1.2' }}>The Creative Isaiah</span>
+            <span style={{ fontSize: '0.8rem', color: 'var(--muted)', fontStyle: 'italic', fontWeight: 'normal' }}>...where creativity thrives</span>
+          </div>
+        </a>
       </div>
       <button className="menu-toggle" aria-label="Toggle menu" onClick={() => setOpen(!open)}>
         {open ? '✕' : '☰'}
