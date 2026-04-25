@@ -1,22 +1,27 @@
-:root{
-    --brand-deep: #000000;
-    --brand-gold: #FFD700;
-    --muted: #6b6b6b;
-    --bg: #F4F4F4;
+.about-grid{ display:grid; grid-template-columns: 400px 1fr; gap:4rem; align-items:center; padding:4rem 0 }
+.about-image{ display:flex; justify-content:center; align-items:center; position: relative; }
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: -10%;
+  bottom: -10%;
+  background: var(--brand-light);
+  border-radius: 24px;
+  z-index: -1;
 }
-
-.about-grid{ display:grid; grid-template-columns: 320px 1fr; gap:2rem; align-items:start; padding:2rem 0 }
-.about-image{ display:flex; justify-content:center; align-items:start }
-.about-image img{ width:220px; height:220px; object-fit:cover; border-radius:50%; box-shadow:0 8px 30px rgba(0,0,0,0.12); border:6px solid #fff }
+.about-image img{ width:100%; height:auto; aspect-ratio: 4/5; object-fit:cover; border-radius:24px; box-shadow:0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
 
 .profile-photo{ display:block }
 
-.skills-list{ margin-top:0.75rem; display:flex; flex-wrap:wrap; gap:0.5rem }
-.skill-badge{ background:linear-gradient(135deg,var(--brand-gold) 0%, rgba(255,215,0,0.15) 100%); color:var(--brand-deep); padding:0.45rem 0.7rem; border-radius:999px; font-weight:600; font-size:0.9rem; box-shadow:0 4px 12px rgba(0,0,0,0.06) }
-.about-content h2{ color:var(--brand-deep); margin-bottom:0.5rem }
-.about-content h3{ color:var(--brand-deep); margin-top:1rem }
-.about-content p{ color:var(--muted); line-height:1.6 }
-.about .cta-btn{ margin-top:1rem }
+.skills-list{ margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:0.75rem }
+.skill-badge{ background:var(--brand-light); border: 1px solid rgba(0,0,0,0.05); color:var(--brand-deep); padding:0.5rem 1rem; border-radius:99px; font-weight:500; font-size:0.95rem; box-shadow:0 1px 2px rgba(0,0,0,0.05); transition: all 0.2s ease; }
+.skill-badge:hover { background: var(--brand-white); transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.about-content h2{ font-size: 2.5rem; color:var(--brand-black); margin-bottom:1.5rem; margin-top: 0; }
+.about-content h3{ font-size: 1.5rem; color:var(--brand-black); margin-top:2.5rem; margin-bottom: 1rem; }
+.about-content p{ color:var(--muted); line-height:1.8; font-size: 1.1rem; margin-bottom: 1rem; }
+.about .cta-btn{ margin-top:2.5rem; }
 
 @media (max-width:900px){
     .about-grid{ grid-template-columns: 1fr; }
